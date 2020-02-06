@@ -31,10 +31,10 @@ Things you may want to cover:
 |password|string|null: false|
 |nickname|string|null: false|
 ### Association
-- has_many :massages
-- has_many :groups
+- has_many :messages through::groups_users
+- has_many :groups through::groups_users
 
-## massagesテーブル
+## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |image|text||
@@ -42,14 +42,12 @@ Things you may want to cover:
 |user_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
-- has_many :
+- has_many :groups
 
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_id|text|null: false|
-|user_id|integer|null: false, foreign_key: true|
-|tweet_id|integer|null: false, foreign_key: true|
+|name|text|null: false|
 ### Association
 - belongs_to :tweet
 - belongs_to :user
