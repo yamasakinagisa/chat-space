@@ -50,21 +50,24 @@
     height: calc(100% - 100px);
     width: 300px;
     padding: 20px 20px 0 20px;
-    .group{
-      color: #ffffff;
-      text-decoration: none;
-      margin-bottom: 40px;
-    }
-      &-list{
+    &-list{
       height: 31px;
       width: 260px;
       display: block;
       box-sizing: border-box;
+      // .group{
+      //   color: #ffffff;
+      //   text-decoration: none;
+      margin-bottom: 40px;
+      
         &-name{
         height: 20px;
         line-height: 15px;
         font-size: 15px;
         margin-bottom: 5px;
+        color: #ffffff;
+        text-decoration: none;
+        
         }
         &-message{
         height: 20px;
