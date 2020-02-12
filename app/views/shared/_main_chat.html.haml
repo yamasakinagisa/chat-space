@@ -19,15 +19,23 @@
       こんにちは
     
      
+  -# .chat-main__form
+  -#   .chat-main__form-box
+  -#     %input.chat-main__form-box-text{:placeholder => "type a message", :type => "text",}/
+  -#     %label.chat-main__form-box-image{class: "input-box__image"}
+  -#       %input.file{type: "file"}
+  -#       = icon('fas', 'image')
+  -#     %input.chat-main__form-box-send{:type => "submit", :name => "commit", :value => "Send",}/
+
+
   .chat-main__form
-    .chat-main__form-box
-      %input.chat-main__form-box-text{:placeholder => "type a message", :type => "text",}/
-      %label.chat-main__form-box-image{class: "input-box__image"}
-        %input.file{type: "file"}
-        = icon('fas', 'image')
-      %input.chat-main__form-box-send{:type => "submit", :name => "commit", :value => "Send",}/
-      
-      
+    = form_for [@group, @message] do |f|
+      .chat-main__form-box
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        = f.label :image, class: 'form__mask__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'
      
       
     
