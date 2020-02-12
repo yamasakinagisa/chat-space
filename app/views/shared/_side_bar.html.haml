@@ -1,0 +1,22 @@
+
+.side-bar
+  .side-bar__user-name
+    .side-bar__user-name-box
+      %p.side-bar__user-name-box__i
+        ユーザー名
+      %ul.side-bar__user-name-box__nemu
+        %li
+        = link_to "#", class: "setting" do
+          = icon('fas', 'edit') 
+        = link_to "#", class: "new-group" do
+          = icon('fas', 'cog') 
+  .side-bar__group
+    = link_to "#", class: "group" do
+      .side-bar__group-list
+        %p.side-bar__group-list-name
+          グループ名
+        %p.side-bar__group-list-message
+          まだメッセージがありません
+
+
+              
