@@ -57,7 +57,7 @@
       box-sizing: border-box;
       // .group{
       //   color: #ffffff;
-      //   text-decoration: none;
+      // text-decoration: none;
       margin-bottom: 40px;
       
         &-name{
@@ -66,13 +66,15 @@
         font-size: 15px;
         margin-bottom: 5px;
         color: #ffffff;
-        text-decoration: none;
-        
         }
         &-message{
         height: 20px;
         line-height: 15px;
         font-size: 11px;
+        color: #ffffff;
+        }
+        a{
+        text-decoration: none;
         }
     }
   }
@@ -120,22 +122,34 @@
     padding: 40px;
     &-user{
       margin-bottom: 12px;
-      &__name{
+      .upper-message{
+      &__user-name{
        color: #333333;
        font-size: 16px;
        float: left;
+       margin-right: 5px;
       }
       &__date{
        color: #999999;
        font-size: 12px;
        
       }
+      }
     }
-    &__text{
+  .lower-message{
+      text-align: left;
+      margin-top: 7px;
+      margin-bottom: 46px;
+      
+    &__content{
       color: #434A54;
       font-size: 14px;
-      margin-bottom: 46px;
+      // img {
+      // width: 200px; 
+      // height: 50px;
+      //   }
     }
+  }
   }
   &__form{
     background-color: #d2d2d2;
