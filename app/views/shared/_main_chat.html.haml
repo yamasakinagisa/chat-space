@@ -1,34 +1,68 @@
 
 .chat-main
   .chat-main__group-info
+   
     .chat-main__group-info-box
+       
       %p.chat-main__group-info-box-i
-        グループ名
+        =@group.name
       %p.chat-main__group-info-box-member
-        member : ユーザー名
+        Menber:
+        - @group.group_users.each do |group_user|
+          = group_user.user.name
+        
     .chat-main__group-info-box2
-      = link_to "#", class: "edit" do
+      = link_to edit_group_path(@group), class: "edit" do
         Edit
-  .chat-main__message
+      -# = link_to "edit", class: "edit" do
+        Edit
+        
+  .chat-main__message 
     .chat-main__message-user
-      %p.chat-main__message-user__name
-        = current_user.name
-      %p.chat-main__message-user__date
-        2020/02/11(Tue) 14:30:00
-    %p.chat-main__message__text
-      こんにちは
-    
-     
-  .chat-main__form
-    .chat-main__form-box
-      %input.chat-main__form-box-text{:placeholder => "type a message", :type => "text",}/
-      %label.chat-main__form-box-image{class: "input-box__image"}
-        %input.file{type: "file"}
-        = icon('fas', 'image')
-      %input.chat-main__form-box-send{:type => "submit", :name => "commit", :value => "Send",}/
-      
-      
-     
-      
+      = render @messages
+
+    -#   %p.chat-main__message-user__name
+    -#     = current_user.name
+    -#   %p.chat-main__message-user__date
+    -#     2020/02/11(Tue) 14:30:00
+    -# %p.chat-main__message__text
+    -#   こんにちは
+
+
+
+
+  -# .chat-main__message 
+  -#   .chat-main__message-user
+  -#     = render @messages
+  -#     %p.chat-main__message-user__name
+  -#       = current_user.name
+  -#     %p.chat-main__message-user__date
+  -#       2020/02/11(Tue) 14:30:00
+  -#   %p.chat-main__message__text
+  -#     こんにちは
     
 
+
+  -# .chat-main__form
+  -#   .chat-main__form-box
+  -#     %input.chat-main__form-box-text{:placeholder => "type a message", :type => "text",}/
+  -#     %label.chat-main__form-box-image{class: "input-box__image"}
+  -#       %input.file{type: "file"}
+  -#       = icon('fas', 'image')
+  -#     %input.chat-main__form-box-send{:type => "submit", :name => "commit", :value => "Send",}/
+
+
+  .chat-main__form
+    = form_for [@group, @message] do |f|
+      .chat-main__form-box
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        = f.label :image, class: 'form__mask__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'
+
+
+
+
+-# - current_user.groups.each do |user|
+-#           = current_user.name

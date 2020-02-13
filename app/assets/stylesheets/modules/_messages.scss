@@ -57,7 +57,7 @@
       box-sizing: border-box;
       // .group{
       //   color: #ffffff;
-      //   text-decoration: none;
+      // text-decoration: none;
       margin-bottom: 40px;
       
         &-name{
@@ -66,13 +66,15 @@
         font-size: 15px;
         margin-bottom: 5px;
         color: #ffffff;
-        text-decoration: none;
-        
         }
         &-message{
         height: 20px;
         line-height: 15px;
         font-size: 11px;
+        color: #ffffff;
+        }
+        a{
+        text-decoration: none;
         }
     }
   }
@@ -120,55 +122,118 @@
     padding: 40px;
     &-user{
       margin-bottom: 12px;
-      &__name{
+      .upper-message{
+      &__user-name{
        color: #333333;
        font-size: 16px;
        float: left;
+       margin-right: 5px;
       }
       &__date{
        color: #999999;
        font-size: 12px;
        
       }
+      }
     }
-    &__text{
+  .lower-message{
+      text-align: left;
+      margin-top: 7px;
+      margin-bottom: 46px;
+      
+    &__content{
       color: #434A54;
       font-size: 14px;
-      margin-bottom: 46px;
+      // img {
+      // width: 200px; 
+      // height: 50px;
+      //   }
     }
+  }
   }
   &__form{
     background-color: #d2d2d2;
     height: 90px;
     width: 100%;
     padding: 20px 40px;
-    &-box{
+    
+    .new_message {
       position: relative;
       display: flex;
       width: 100%;
-      &-text{
-      height: 50px;
-      width: calc(100% - 100px);
-      float: left;
-      color: #434A54;
+
+        
+       .chat-main__form-box{
+        height: 50px;
+        width: calc(100% - 100px);
+        float: left;
+        color: #434A54;
+
+        .form__message{
+          height: 50px;
+          width: 100%;
+          padding: 0 40px 0 10px;
+          color: #434a54;
+          border-style: none;
+        }
+      
+        .form__mask__image{
+         position: absolute ; 
+         top: 15px;
+         right: 120px;
+         .hidden{
+           display: none;
+        }
       }
-      &-send{
+      }
+      
+    }
+    .form__submit{
       background-color: #38aef0;
       color: white;
       border: 1px solid#38aef0;
       padding: 12px 20px;
       margin: 0 15px;
       float: right;
-      }
-      &-image{
-        position: absolute ; 
-        top: 15px;
-        right: 120px;
-        .file{
-          display: none;
-        }
-      }
-    }
+      } 
+    
   }
   
 }
+
+
+
+
+// &__form{
+//   background-color: #d2d2d2;
+//   height: 90px;
+//   width: 100%;
+//   padding: 20px 40px;
+//   &-box{
+//     position: relative;
+//     display: flex;
+//     width: 100%;
+//     &-text{
+//     height: 50px;
+//     width: calc(100% - 100px);
+//     float: left;
+//     color: #434A54;
+//     }
+//     &-send{
+//     background-color: #38aef0;
+//     color: white;
+//     border: 1px solid#38aef0;
+//     padding: 12px 20px;
+//     margin: 0 15px;
+//     float: right;
+//     }
+//     &-image{
+//       position: absolute ; 
+//       top: 15px;
+//       right: 120px;
+//       .file{
+//         display: none;
+//       }
+//     }
+//   }
+// }
