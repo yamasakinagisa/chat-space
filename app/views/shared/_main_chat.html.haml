@@ -7,7 +7,7 @@
       %p.chat-main__group-info-box-i
         =@group.name
       %p.chat-main__group-info-box-member
-        Menber:
+        Member:
         - @group.group_users.each do |group_user|
           = group_user.user.name
         
