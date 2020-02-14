@@ -58,6 +58,13 @@ gem 'haml-rails'
 gem 'devise'
 gem 'pry-rails'
 
+
+gem 'rspec-rails', '~> 3.5'
+gem 'rails-controller-testing'
+gem 'factory_bot_rails'
+gem 'faker'
+
 gem 'carrierwave'
 gem 'mini_magick'
+
 
