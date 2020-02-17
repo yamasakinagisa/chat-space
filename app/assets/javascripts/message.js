@@ -1,6 +1,5 @@
 $(function(){ 
     function buildHTML(message){
-    // console.log(message)
      if ( message.image ) {
        var html =
         `<div class="message" data-message-id=${message.id}>
@@ -53,7 +52,6 @@ $('#new_message').on('submit', function(e){
      contentType: false
    })
     .done(function(data){
-      // console.log(data)
       var html = buildHTML(data);
       $('.chat-main__message').append(html);      
       $('form')[0].reset();
