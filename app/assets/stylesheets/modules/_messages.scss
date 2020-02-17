@@ -50,6 +50,7 @@
     height: calc(100% - 100px);
     width: 300px;
     padding: 20px 20px 0 20px;
+    overflow: scroll;
     &-list{
       height: 31px;
       width: 260px;
@@ -120,6 +121,7 @@
     background-color: #fafafa;
     height:calc(100% - 100px - 90px) ;
     padding: 40px;
+    overflow: scroll;
     &-user{
       margin-bottom: 12px;
       .upper-message{
