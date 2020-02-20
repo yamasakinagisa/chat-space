@@ -2,7 +2,8 @@ $(function(){
   var buildHTML = function(message) {
     if (message.content && message.image) {
       //data-idが反映されるようにしている
-      var html = `<div class="message" data-message-id= ${message.id} >
+      var html = 
+      `<div class="message" data-message-id= ${message.id} >
         <div class="upper-message">
           <div class="upper-message__user-name">
             ${message.user_name}
@@ -20,7 +21,8 @@ $(function(){
       </div>`
     } else if (message.content) {
       //同様に、data-idが反映されるようにしている
-      var html = `<div class="message" data-message-id= ${message.id}  >
+      var html = 
+      `<div class="message" data-message-id= ${message.id}  >
         <div class="upper-message">
           <div class="upper-message__user-name">
             ${message.user_name}
@@ -37,7 +39,8 @@ $(function(){
       </div>`
     } else if (message.image) {
       //同様に、data-idが反映されるようにしている
-      var html = `<div class="message" data-message-id=  ${message.id} >
+      var html = 
+      `<div class="message" data-message-id=  ${message.id} >
         <div class="upper-message">
           <div class="upper-message__user-name">
             ${message.user_name}
@@ -68,7 +71,7 @@ $(function(){
     })
     .done(function(data){
       var html = buildHTML(data);
-      $('.chat-main__message').append(html);      
+      $('.chat-main__message-user').append(html);
       $('form')[0].reset();
       $('.chat-main__message').animate({ scrollTop: $('.chat-main__message')[0].scrollHeight});
       $('.form__submit').prop('disabled', false);
