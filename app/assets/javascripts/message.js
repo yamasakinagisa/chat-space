@@ -101,8 +101,8 @@ $(function(){
           insertHTML += buildHTML(message)
         });
           //メッセージが入ったHTMLに、入れ物ごと追加
-        $('.message').append(insertHTML);
-        $('.message').animate({ scrollTop: $('.message')[0].scrollHeight});
+        $('.chat-main__message-user').append(insertHTML);
+        $('.chat-main__message').animate({ scrollTop: $('.chat-main__message')[0].scrollHeight});
       }
     })
     .fail(function() {
